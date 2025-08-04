@@ -10,7 +10,7 @@ def port_open?(ip, port, timeout = 2)
     begin
       TCPSocket.new(ip, port).close
       true
-    rescue Errno:ECONNREFUSED, Errno::EHOSTUNREACH, SocketError
+    rescue Errno::ECONNREFUSED, Errno::EHOSTUNREACH, SocketError
       false
     end
   end
