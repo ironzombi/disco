@@ -20,8 +20,20 @@ def scan_subnet(subnet, port)
   end
 end
 
+def ping_subnet(subnet)
+  IPAddr.new(subnet).to_range.each do |ip|
+    next if ip.to_s.end_with?('0') || ip.to_s.end_with?('255')
+    print "Pinging #{ip}"
+    if host_alive?(ip.to_s)
+      puts "ALIVE"
+    else
+      puts "unreachable"
+    end
+  end
+end
+
 begin
-  scan_subnet(subnet, port)
+  ping_subnet(subnet)
 rescue Interrupt
   puts ":"
   puts "Stopping Scan"
