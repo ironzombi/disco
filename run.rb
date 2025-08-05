@@ -3,7 +3,7 @@ require 'ipaddr'
 require_relative 'scan'
 
 subnet = "168.118.134.129/29"
-port 22
+port = 22
 
 def scan_subnet(subnet, port)
   IPAddr.new(subnet).to_range.each do |ip|
