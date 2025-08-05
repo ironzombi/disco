@@ -1,4 +1,8 @@
 #!/usr/bin/env ruby
+#Run the scan    #
+#                #
+# iz             #
+##################
 require 'ipaddr'
 require_relative 'scan'
 

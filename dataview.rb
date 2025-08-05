@@ -1,4 +1,7 @@
 #!/usr/bin/ruby
+#process results #
+#                #
+##################
 require 'ipaddr'
 
 def group_ips_from_file(filename, subnet_mask = 24)
