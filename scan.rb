@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 #   DISCOvery     #
-#                 #
+# ping and scan   #
 ###################
 require 'socket'
 require 'net/ping'
