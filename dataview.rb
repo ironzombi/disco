@@ -17,11 +17,9 @@ def group_ips_from_file(filename, subnet_mask = 24)
   subnet_groups
 end
 
-# Path to your flat IP file
 file_path = "ips.txt"
 grouped = group_ips_from_file(file_path)
 
-# Output grouped IPs
 grouped.each do |subnet, ips|
   puts "Subnet #{subnet}:"
   ips.sort.each { |ip| puts "  #{ip}" }
