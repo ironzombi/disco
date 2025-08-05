@@ -34,6 +34,7 @@ end
 
 begin
   ping_subnet(subnet)
+  scan_subnet(subnet, port)
 rescue Interrupt
   puts ":"
   puts "Stopping Scan"
