@@ -23,7 +23,7 @@ end
 def ping_subnet(subnet)
   IPAddr.new(subnet).to_range.each do |ip|
     next if ip.to_s.end_with?('0') || ip.to_s.end_with?('255')
-    print "Pinging #{ip}"
+    print "Pinging #{ip} "
     if host_alive?(ip.to_s)
       puts "ALIVE"
     else

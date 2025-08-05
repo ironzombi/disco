@@ -7,7 +7,7 @@ require 'net/ping'
 require 'timeout'
 
 def host_alive?(ip)
-  ping = Net::Ping:External.new(ip)
+  ping = Net::Ping::External.new(ip)
 
   if ping.ping?
     true
