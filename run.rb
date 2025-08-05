@@ -16,3 +16,5 @@ def scan_subnet(subnet, port)
     end
   end
 end
+
+scan_subnet(subnet, port)
