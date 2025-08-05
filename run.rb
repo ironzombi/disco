@@ -4,7 +4,7 @@ require_relative 'scan'
 
 FP = File.open("scan_results.log", "w+")
 
-subnet = "168.118.134.129/29"
+subnet = "165.118.134.129/29"
 port = 22
 
 def scan_subnet(subnet, port)
