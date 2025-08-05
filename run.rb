@@ -26,6 +26,7 @@ def ping_subnet(subnet)
     print "Pinging #{ip} "
     if host_alive?(ip.to_s)
       puts "ALIVE"
+      FP.puts("#{ip}")
     else
       puts "unreachable"
     end
