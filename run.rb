@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 require 'ipaddr'
 require_relative 'scan'
+require_relative 'dataview'
 
 FP = File.open("scan_results.log", "w+")
 
