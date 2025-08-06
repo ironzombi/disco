@@ -1,11 +1,15 @@
 #!/usr/bin/env ruby
+#Run the scan    #
+#                #
+# iz             #
+##################
 require 'ipaddr'
 require_relative 'scan'
 require_relative 'dataview'
 
 FP = File.open("scan_results.log", "w+")
 
-subnet = "165.118.134.129/29"
+subnet = "165.118.134.0/24"
 port = 22
 
 def scan_subnet(subnet, port)
@@ -36,7 +40,7 @@ end
 
 begin
   ping_subnet(subnet)
-  scan_subnet(subnet, port)
+  #scan_subnet(subnet, port)
 rescue Interrupt
   puts ":"
   puts "Stopping Scan"
